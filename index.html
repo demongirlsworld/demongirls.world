@@ -40,7 +40,7 @@
         transform: translate(-50%, -50%);
         object-fit: cover;
       }
-      .buy-now-button {
+      .old-buy-now-button {
         position: fixed;
         top: 20px;
         right: 20px;
@@ -58,21 +58,45 @@
         transition: box-shadow 0.3s ease;
       }
 
+      .buy-now-button {
+        text-decoration: none;
+        text-align: center;
+        opacity: 0.7;
+        position: fixed;
+        right: 0;
+        left: 0;
+        bottom: 10px;
+        background-color: black;
+        color: white;
+        width: 15%;
+        padding: 15px 30px;
+        margin: 0 auto;
+        border: none;
+        border-radius: 50px;
+        font-size: 18px;
+        z-index: 9999;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        font-weight: 800;
+        box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5);
+        transition: all 0.3s ease;
+      }
+
       .buy-now-button:hover {
-        background-color: #222;
+        background-color: #f00;
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
       }
       #titleImage {
         position: absolute;
         bottom: 0;
         left: 50%;
-        transform: translate(-50%, 25%);
+        transform: translate(-50%, 15%);
         max-width: 100%;
       }
       /*****/
       .social-icons {
         position: fixed;
-        bottom: 10px;
+        bottom: 70px;
         left: 0;
         right: 0;
         z-index: 9999;
@@ -93,6 +117,19 @@
       .social-icons a:hover {
         color: #444;
       }
+      @media (max-width: 768px) {
+        .social-icons {
+          bottom: 90px;
+        }
+        #titleImage {
+          top: 0;
+          transform: translate(-50%, 0);
+        }
+        .buy-now-button {
+          bottom: 20px;
+          width: 50%;
+        }
+      }
     </style>
     <link
       rel="stylesheet"
@@ -105,7 +142,13 @@
         <source src="background.mp4" type="video/mp4" />
       </video>
     </div>
-    <a href="https://www.scatter.art/demon-girls-world?tab=mint" target="_bank" id="buyNowButton" class="buy-now-button">Collect Them</a>
+    <a
+      href="https://www.scatter.art/demon-girls-world?tab=mint"
+      target="_blank"
+      id="buyNowButton"
+      class="buy-now-button"
+      >Collect Them</a
+    >
     <audio id="audio" src="bg.mp3" loop preload="auto"></audio>
     <img id="titleImage" src="title.png" alt="Title" />
     <div id="socials" class="social-icons">
